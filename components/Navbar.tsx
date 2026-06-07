@@ -16,6 +16,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
+  // Pre-filled WhatsApp link
+  const whatsappUrl = "https://wa.me/923166888716?text=Assalam-o-Alaikum%20BeeHive%20Cafe!%20Mujhe%20order%20karna%20hai.%20%F0%9F%94%9F%F0%9F%8D%95";
+
   // Handle scroll detection for sticky background
   useEffect(() => {
     const handleScroll = () => {
@@ -33,7 +36,7 @@ export default function Navbar() {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-30% 0px -60% 0px', // Target middle of viewport
+      rootMargin: '-30% 0px -60% 0px',
       threshold: 0,
     }
 
@@ -59,7 +62,7 @@ export default function Navbar() {
     setIsOpen(false)
     const element = document.getElementById(id)
     if (element) {
-      const offset = 72 // Navbar height
+      const offset = 80 // Height match with navbar
       const bodyRect = document.body.getBoundingClientRect().top
       const elementRect = element.getBoundingClientRect().top
       const elementPosition = elementRect - bodyRect
@@ -76,7 +79,8 @@ export default function Navbar() {
     <nav 
       role="navigation"
       aria-label="Primary navigation"
-      className={`fixed top-0 left-0 w-full h-[72px] z-50 flex items-center justify-between px-6 md:px-12 transition-all duration-300 ${
+      // Navbar height barha kar h-[80px] kar di taake logo fit ho sake
+      className={`fixed top-0 left-0 w-full h-[80px] z-50 flex items-center justify-between px-6 md:px-12 transition-all duration-300 ${
         scrolled 
           ? 'bg-[#221F1F] backdrop-blur-md shadow-lg border-b border-white/10' 
           : 'bg-[#0F0D0D]/90 backdrop-blur-sm border-b border-white/5'
@@ -89,9 +93,10 @@ export default function Navbar() {
         className="flex items-center gap-3 cursor-pointer group"
         aria-label="BeeHive Cafe & Restaurant homepage"
       >
-        <Logo className="w-8 h-8 transition-transform duration-300 group-hover:scale-105" />
+        {/* Logo size set to w-14 h-14 to perfectly balance inside navbar */}
+        <Logo className="w-14 h-14 transition-transform duration-300 group-hover:scale-105 shadow-md" />
         <div className="flex flex-col">
-          <span className="font-sans font-black text-xl tracking-tight leading-none text-white transition-colors group-hover:text-brand-yellow">
+          <span className="font-sans font-black text-xl tracking-tight leading-none text-white transition-colors group-hover:text-[#F5C21B]">
             BeeHive
           </span>
           <span className="font-serif italic text-[11px] text-gray-300 leading-none mt-1">
@@ -114,17 +119,17 @@ export default function Navbar() {
               }}
               className={`text-sm font-semibold tracking-wide uppercase py-1 border-b-2 transition-all duration-300 ${
                 isActive 
-                  ? 'text-brand-yellow border-brand-yellow' 
-                  : 'text-gray-300 border-transparent hover:text-brand-yellow'
+                  ? 'text-[#F5C21B] border-[#F5C21B]' 
+                  : 'text-gray-300 border-transparent hover:text-[#F5C21B]'
               }`}
             >
               {link.name}
             </a>
           )
         })}
-        {/* Reservation/Order quick item */}
+        {/* Order Now Button with Pre-filled URL */}
         <a
-          href="https://wa.me/923166888716"
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#7CB342] hover:bg-[#689f38] text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg shadow-[#7CB342]/20 hover:scale-105 active:scale-95"
@@ -136,7 +141,7 @@ export default function Navbar() {
       {/* Mobile Hamburger Trigger */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex md:hidden p-2 text-white hover:text-brand-yellow focus:outline-none"
+        className="flex md:hidden p-2 text-white hover:text-[#F5C21B] focus:outline-none"
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         aria-label={isOpen ? "Close main menu" : "Open main menu"}
@@ -147,7 +152,7 @@ export default function Navbar() {
       {/* Mobile Drawer Overlay Dialog */}
       <div
         id="mobile-menu"
-        className={`fixed top-[72px] left-0 w-full bg-brand-dark/95 border-b border-white/10 backdrop-blur-lg flex flex-col md:hidden transition-all duration-300 ease-in-out md:pointer-events-none md:opacity-0 ${
+        className={`fixed top-[80px] left-0 w-full bg-[#0F0D0D]/95 border-b border-white/10 backdrop-blur-lg flex flex-col md:hidden transition-all duration-300 ease-in-out md:pointer-events-none md:opacity-0 ${
           isOpen ? 'opacity-100 translate-y-0 h-auto py-8 px-6 shadow-2xl' : 'opacity-0 -translate-y-4 h-0 overflow-hidden pointer-events-none'
         }`}
       >
@@ -163,7 +168,7 @@ export default function Navbar() {
                   handleLinkClick(link.id)
                 }}
                 className={`text-lg font-bold uppercase transition-colors duration-200 py-1 ${
-                  isActive ? 'text-brand-yellow' : 'text-gray-300 hover:text-brand-yellow'
+                  isActive ? 'text-[#F5C21B]' : 'text-gray-300 hover:text-[#F5C21B]'
                 }`}
               >
                 {link.name}
@@ -171,10 +176,10 @@ export default function Navbar() {
             )
           })}
           <a
-            href="https://wa.me/923166888716"
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand-green text-white font-bold text-sm uppercase tracking-wide py-3 px-6 rounded-full w-full max-w-xs mx-auto hover:bg-green-600 transition-colors duration-200 shadow-lg"
+            className="bg-[#7CB342] text-white font-bold text-sm uppercase tracking-wide py-3 px-6 rounded-full w-full max-w-xs mx-auto hover:bg-[#689f38] transition-colors duration-200 shadow-lg"
           >
             Order on WhatsApp
           </a>
