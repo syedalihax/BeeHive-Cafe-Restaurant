@@ -32,7 +32,7 @@ export default function MapSection() {
         <FadeUp delay={0.2} className="w-full">
           <div className="rounded-2xl overflow-hidden border-2 border-brand-yellow/30 shadow-2xl bg-brand-black relative">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.847!2d66.9400!3d30.1580!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ed2f37b6543a7c1%3A0x4d82748b7f3a9d2e!2sNew%20Hazara%20Town%2C%20Quetta%2C%20Balochistan!5e0!3m2!1sen!2spk!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13796.917760991993!2d66.94458729476644!3d30.173439208685497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ed2e16b015ff991%3A0x620438e663b0e86a!2sBeeHive%20Cafe%20%26%20Restaurant!5e0!3m2!1sen!2s!4v1780845896159!5m2!1sen!2s" 
               width="100%"
               height="450"
               style={{ border: 0, filter: 'grayscale(15%) invert(5%) brightness(95%) contrast(95%)' }}
