@@ -73,21 +73,12 @@ export const metadata: Metadata = {
     canonical: 'https://beehivecafe.pk',
   },
   category: 'restaurant',
-  icons: {
-    icon: [
-      { url: '/images/favicon.ico', sizes: 'any' },
-      { url: '/images/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
-      { url: '/images/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
-    ],
-    apple: [
-      { url: '/images/apple-touch-icon.png', sizes: '180x180' },
-    ],
-    shortcut: '/images/favicon.ico',
-  }
+  
+}
 
 interface RootLayoutProps {
-    children: React.ReactNode
-  }
+  children: React.ReactNode
+}
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
@@ -100,14 +91,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className="antialiased min-h-screen font-sans bg-brand-black text-white selection:bg-brand-yellow selection:text-brand-dark">
         {/* Skip to Content for Screen Readers */}
-        <a
-          href="#main-content"
+        <a 
+          href="#main-content" 
           id="skip-link"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-brand-yellow text-brand-dark px-4 py-2 rounded font-semibold z-[100]"
         >
           Skip to main content
         </a>
-
+        
         {children}
 
         {/* JSON-LD Structured Data Schema */}
