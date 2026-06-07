@@ -85,7 +85,7 @@ export default function ContactSection() {
                     Opening Hours
                   </h3>
                   <p className="text-white text-base md:text-lg font-bold mt-1">
-                    12:00 PM – 2:00 AM (Everyday)
+                    9:00 PM – 2:00 AM (Everyday)
                   </p>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function ContactSection() {
                     Our Location
                   </h3>
                   <p className="text-white text-sm md:text-base font-semibold leading-relaxed mt-1">
-                    Start of Mari Colony, Karani Road, Muhalla Jaferia, New Hazara Town, Quetta, 87300, Pakistan
+                    Start of Mari Colony, Karani Road, Muhalla Jaferia, New Hazara Town, Quetta, Pakistan
                   </p>
                 </div>
               </div>
