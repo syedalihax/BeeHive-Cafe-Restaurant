@@ -11,7 +11,7 @@ export default function Logo({ className = '' }: LogoProps) {
   return (
     <div className={`relative flex items-center justify-center overflow-hidden rounded-full ${className}`}>
       <Image
-        src="/images/logo.jpg" // Aapka logo file name aur path
+        src="/images/logo.png" // Aapka logo file name aur path
         alt="BeeHive Cafe & Restaurant logo"
         fill
         priority
