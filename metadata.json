@@ -1,0 +1,6 @@
+{
+  "name": "BeeHive Cafe & Restaurant",
+  "description": "BeeHive Cafe & Restaurant — Quetta's New Hazara Town's best cafe. Authentic Afghan & Hazara cuisine, fresh bakery, juices, and fast food with home delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
