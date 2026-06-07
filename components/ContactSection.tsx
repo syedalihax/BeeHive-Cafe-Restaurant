@@ -127,7 +127,7 @@ export default function ContactSection() {
                 href={whatsappOrderUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-brand-green hover:bg-green-600 text-white px-10 py-5 rounded-full text-lg md:text-xl font-black shadow-2xl shadow-brand-green/20 hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2"
+                className="bg-brand-green hover:bg-green-600 text-white px-7 py-4 rounded-full text-lg md:text-xl font-black shadow-2xl shadow-brand-green/20 hover:scale-105 active:scale-95 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Order via WhatsApp 💬
               </a>
